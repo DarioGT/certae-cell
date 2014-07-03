@@ -1,0 +1,9 @@
+*.class
+*.pyc
+*.pyo
+*.bak
+.project
+.pydevproject
+.settings
+db.sqlite3
+settings_secured.py
