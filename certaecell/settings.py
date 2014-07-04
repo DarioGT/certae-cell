@@ -21,9 +21,22 @@ PPATH = BASE_DIR
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from certaecell.settings_secured import PROTECTED_KEY, MYSQLCONFIG
-SECRET_KEY = PROTECTED_KEY
-DATABASES = MYSQLCONFIG
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PPATH, 'db/testproto.db'),
+    }
+}
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = ')3)8tas^#g$3#)f-@owl-o*pi&b-ko0e$5kcggs2xl5t+uv#fq'
+
+
+EXTJS_VERSION = '4.2.1.883'
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
